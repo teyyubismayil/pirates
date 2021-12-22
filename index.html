@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.js" integrity="sha512-ni9KCnVSgXhUiLZNWacoMz4DTCR4cRnxdnec/3VH+1woBhvm8mE/yu+KxytcG0igc2BIYnQL6u5+8jl7QczjOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            text-align:center;
+        }
+        .d-none {
+            display: none;
+        }
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .dialog {
+            padding: 10px;
+            background-color: lightgray;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="startGameDiv" class="center d-none dialog">
+    <h1>Pirates and treasures</h1>
+    <p>There are five rational pirates (in strict order of seniority 1, 2, 3, 4 and 5,
+        that means 2 depends on 1, 3 depends on 2 and so on) who found 100 gold coins.
+        They must decide how to distribute them.<br/>
+        You propose a plan of distribution. The pirates, then vote on whether to accept this distribution.
+        If the majority accepts the plan or tie vote, the coins are dispersed and the game ends.
+        If the majority rejects the plan, the proposer is thrown overboard from the pirate ship and dies and you lose.<br/>
+        Pirates base their decisions on four factors. First of all, each pirate wants to survive. Second, given survival,
+        each pirate wants to maximize the number of gold coins he receives. Third, each pirate would prefer to throw another
+        overboard, if all other results would otherwise be equal. And finally, the pirates do not trust each other.
+    </p>
+
+
+    <input id="startGameBtn" type="button" value="Start game"/>
+</div>
+
+<div id="divisionDiv" class="center d-none dialog">
+    <p>Enter the number of coins for each pirate</p>
+</div>
+
+<div id="endDiv" class="center d-none dialog">
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
